@@ -1,0 +1,8 @@
+secrets/*
+build/*
+node_modules/*
+yarn-error.log
+.nodemonignore
+coverage/*
+api/coverage/*
+.nyc_output

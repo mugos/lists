@@ -1,0 +1,9 @@
+HISTORY.md
+README.md
+.drone.yml
+.drone.yml.sig
+docker-compose.prod.yml
+docker-compose.yml
+.git
+docs
+secrets

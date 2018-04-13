@@ -1,0 +1,26 @@
+pipeline:
+  test:
+    image: yurifl/yarn
+    commands:
+      - yarn global add mocha
+      - yarn install
+      - yarn test
+  publish:
+    image: plugins/docker
+    privileged: true
+    registry: gcr.io
+    repo: gcr.io/yebo-project/lists
+    tag: latest
+    username: _json_key
+    when:
+      event: push
+    environment:
+      - DOCKER_LAUNCH_DEBUG=true
+  deploy:
+    image: yebodev/drone-gke
+    pull: true
+    project: yebo-project
+    zone: us-east1-d
+    cluster: microservices-1
+    when:
+      event: push

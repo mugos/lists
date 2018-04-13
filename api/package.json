@@ -1,0 +1,52 @@
+{
+  "name": "lists",
+  "version": "1.0.0",
+  "description": "Lists api",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": "https://github.com/yurifrl/lists",
+  "scripts": {
+    "start": "babel-node index.js",
+    "startw": "nodemon index.js --exec babel-node",
+    "test": "mocha --recursive --require babel-register --reporter nyan",
+    "testw": "mocha --debug --bail --colors --watch --recursive --require babel-register"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  },
+  "keywords": [
+    "api",
+    "lists"
+  ],
+  "author": [
+    "Gabriel Corado",
+    "Yuri Freire"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yurifrl/lists#readme",
+  "devDependencies": {
+    "babel-runtime": "^6.20.0",
+    "graphql-server-hapi": "^0.4.3",
+    "graphql-tools": "^0.8.4",
+    "hapi": "^16.0.2",
+    "ramda": "^0.22.1",
+    "redis": "^2.6.3",
+    "babel-cli": "^6.18.0",
+    "babel-plugin-istanbul": "^3.1.2",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chai-http": "^3.0.0",
+    "graphql": "^0.9.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.0.0",
+    "redis-mock": "^0.16.0"
+  }
+}

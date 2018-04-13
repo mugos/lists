@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: lists
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: lists
+    spec:
+      containers:
+        - name: lists
+          image: "lists"

@@ -1,0 +1,22 @@
+FROM node:argon
+
+# App
+WORKDIR /usr/local/src
+
+# Be more eficient
+COPY package.json /usr/local/src
+COPY yarn.lock /usr/local/src
+
+# Get project deps
+RUN yarn install
+
+# Copy the files
+COPY . /usr/local/src
+
+# Expose ports
+EXPOSE 80 443
+
+RUN yarn global add mocha nyc istanbul babel-cli isparta
+
+# Image command
+CMD ["yarn", "start"]
